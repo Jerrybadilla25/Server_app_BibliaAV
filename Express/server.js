@@ -12,10 +12,14 @@ app.set('port', process.env.PORT || 3002 );
 //import databd
 const {mongoose}= require('./database');
 
+
+//app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs')
+//app.use(express.static(__dirname + '/public'));
 //archivos estaticos
 //app.use(express.static(path.join(__dirname, '/build')));
 //app.use(express.static(__dirname + '/build'));
-app.use(express.static('./build/'));
+app.use(express.static('public'))
 
 //middlewear
 app.use(morgan('dev'));
@@ -25,6 +29,7 @@ app.use(cors());
 //rutas
 
 app.use('/user', require('./Router/router.user'));
+app.use('/politica', require('./Router/router.politica'));
 //app.use('/books', require('./router/roter.book'));
 //app.use('/', require('./router/roter'));
 
