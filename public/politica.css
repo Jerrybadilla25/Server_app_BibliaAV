@@ -5,15 +5,11 @@ body{
     background-color: #140e1b;  
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 20rem;
-    padding-right: 20rem;
-    margin-top: 5rem;
-    
+.imgper{
+    width: 200px;
+    height: 200px;
 }
+
 
 .header{
     background-color: #241c30;
@@ -23,36 +19,27 @@ body{
     width: 100%;
 }
 .footer{
-    background-color: #241c30;
+    
     height: 5rem;
 }
 p{
-    color: #f3f4f6;
+    
     font-size: 1.2em;
 }
 
 h1{
-    color: #f3f4f6;
+    
     text-align: center;
 }
 
-h2{
-    color: #f3f4f6;
+h2, h4{
+    
     text-align: center;
     
 }
 
 
 @media only screen and (max-width: 600px) {
-    .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: .5rem;
-        padding-right: .5rem;
-        margin-top: 5rem;
-        
-    };
     .header{
         background-color: #241c30;
         height: 5rem;
