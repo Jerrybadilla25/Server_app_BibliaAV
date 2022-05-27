@@ -7,6 +7,7 @@ const Controller = require('../Controller/User.controller');
 //Rutas
 router.post("/inicioAll", Controller.getUser);
 router.post("/createJson", Controller.getCreate);
+router.post("/imagesCloudDinary", Controller.getImagesCloudDinary);
 
 //router.post("/createUser", Controller.addUser);
 

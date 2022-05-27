@@ -7,7 +7,9 @@ const Charter = require("../model/model.charter");
 const Verse = require("../model/model.verse");
 const Versiones = require("../model/model.version");
 const VerseDia = require("../model/model.verseDia");
-const { createInflate } = require("zlib");
+//const { createInflate } = require("zlib");
+
+const images = require('../images/images')
 
 exports.getUser = async function (req, res) {
   try {
@@ -31,6 +33,22 @@ exports.getCreate = async function (req, res) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 };
+
+exports.getImagesCloudDinary= function (req, res) {
+  const { token } = req.body;
+  if (token === process.env.TOKEN) {
+    let a = images.imagesCloudDinary()
+    return res.json(a);
+  } else {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+}
+
+
+
+
+
+
 
 const creteFile = async () => {
   console.log("creando archivos");
